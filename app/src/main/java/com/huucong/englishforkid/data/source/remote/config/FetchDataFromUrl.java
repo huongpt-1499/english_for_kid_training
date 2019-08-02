@@ -1,7 +1,6 @@
 package com.huucong.englishforkid.data.source.remote.config;
 
 import android.os.AsyncTask;
-import android.util.Log;
 import com.huucong.englishforkid.data.model.EnglishVideo;
 import com.huucong.englishforkid.utils.Constants;
 import org.jsoup.Jsoup;
@@ -28,15 +27,19 @@ public class FetchDataFromUrl extends AsyncTask<String,Void, List<EnglishVideo>>
         List<EnglishVideo> englishVideos = new ArrayList<>();
         try {
             Document document = Jsoup.connect(strings[0])
-                .timeout(30000)
+                .timeout(Constants.TIME_OUT)
                 .get();
-            Elements elements = document.select("div.views-field.views-field-field-image");
+            Elements elements = document.select(Constants.CSS_QUERY);
             if (elements != null && elements.size() > 0) {
                 for (Element element : elements) {
-                    String elementWidth = element.getElementsByTag("img").attr("width");
-                    if (!elementWidth.equals(String.valueOf(WIDTH_ELEMENT))) continue;
+                    String elementWidth = element.getElementsByTag(Constants.TAG_IMG)
+                        .attr(Constants.ATTR_WIDTH);
+                    if (!String.valueOf(WIDTH_ELEMENT).equals(elementWidth)) continue;
                     String title = element
-                        .getElementsByTag("img").first().attr("title");
+                        .getElementsByTag(Constants.TAG_IMG)
+                        .first()
+                        .attr(Constants.ATTR_TITLE);
+
                     String category = null;
 
                     if (title.contains(KEY_SONG)) {
@@ -48,12 +51,14 @@ public class FetchDataFromUrl extends AsyncTask<String,Void, List<EnglishVideo>>
                     }
 
                     String thumbnail = element
-                        .getElementsByTag("img").first().attr("src");
-                    String link = Constants.URL_SITE +
-                        element.getElementsByTag("a").first().attr("href");
-                    Log.d(TAG, title + "\n" + thumbnail + "\n" + link + "\n");
+                        .getElementsByTag(Constants.TAG_IMG)
+                        .first()
+                        .attr(Constants.ATTR_SRC);
 
-                    if (title != null) {
+                    String link = Constants.URL_SITE +
+                        element.getElementsByTag(Constants.TAG_A).first().attr(Constants.ATTR_HREF);
+
+                    if (!title.isEmpty()) {
                         EnglishVideo englishVideo = new EnglishVideo.Builder(title)
                             .thumbnail(thumbnail)
                             .category(category)
@@ -65,7 +70,7 @@ public class FetchDataFromUrl extends AsyncTask<String,Void, List<EnglishVideo>>
                 return englishVideos;
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            mOnFetchDataListener.onFetchDataFail(e.getMessage());
         }
         return null;
     }

@@ -35,11 +35,11 @@ public class EnglishVideo {
         this.mThumbnail = thumbnail;
     }
 
-    public String getCategory(){
+    public String getCategory() {
         return mCategory;
     }
 
-    public void setCategory(String category){
+    public void setCategory(String category) {
         this.mCategory = category;
     }
 
@@ -59,7 +59,7 @@ public class EnglishVideo {
         this.mData = data;
     }
 
-    public static class Builder{
+    public static class Builder {
         private String mTitle;
         private String mThumbnail;
         private String mCategory;
@@ -70,27 +70,27 @@ public class EnglishVideo {
             this.mTitle = mTitle;
         }
 
-        public Builder thumbnail(String thumbnail){
+        public Builder thumbnail(String thumbnail) {
             this.mThumbnail = thumbnail;
             return this;
         }
 
-        public Builder category(String category){
+        public Builder category(String category) {
             this.mCategory = category;
             return this;
         }
 
-        public Builder link(String link){
+        public Builder link(String link) {
             this.mLink = link;
             return this;
         }
 
-        public Builder data(String data){
+        public Builder data(String data) {
             this.mData = data;
             return this;
         }
 
-        public EnglishVideo build(){
+        public EnglishVideo build() {
             EnglishVideo englishVideo = new EnglishVideo(this);
             return englishVideo;
         }

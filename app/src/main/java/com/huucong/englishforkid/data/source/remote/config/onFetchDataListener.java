@@ -5,4 +5,5 @@ import java.util.List;
 
 public interface onFetchDataListener {
     void onFetchDataSuccess(List<EnglishVideo> englishVideos);
+    void onFetchDataFail(String error);
 }
