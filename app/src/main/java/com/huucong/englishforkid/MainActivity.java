@@ -3,10 +3,10 @@ package com.huucong.englishforkid;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.huucong.englishforkid.data.model.EnglishVideo;
-import com.huucong.englishforkid.data.source.remote.config.onFetchDataListener;
+import com.huucong.englishforkid.data.source.remote.config.OnFetchDataListener;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements onFetchDataListener {
+public class MainActivity extends AppCompatActivity implements OnFetchDataListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -16,9 +16,9 @@ public class FetchDataFromUrl extends AsyncTask<String,Void, List<EnglishVideo>>
     private static final int WIDTH_ELEMENT = 140;
     private static final String KEY_SONG = "Song: ";
     private static final String KEY_SHORT_STORY = "Short stories: ";
-    private onFetchDataListener mOnFetchDataListener;
+    private OnFetchDataListener mOnFetchDataListener;
 
-    public FetchDataFromUrl(onFetchDataListener onFetchDataListener) {
+    public FetchDataFromUrl(OnFetchDataListener onFetchDataListener) {
         this.mOnFetchDataListener = onFetchDataListener;
     }
 
