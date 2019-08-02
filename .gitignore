@@ -1,3 +1,11 @@
+#Redundant files (idea, gradle)
+.idea/
+gradle
+gradle.*
+*.gradle
+gradlew.*
+gradlew
+
 # Built application files
 *.apk
 *.ap_
