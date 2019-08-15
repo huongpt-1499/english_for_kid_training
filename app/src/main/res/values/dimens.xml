@@ -7,4 +7,11 @@
     <dimen name="text_size_title_item">20sp</dimen>
     <dimen name="width_stroke_item_video">1dp</dimen>
     <dimen name="padding_thumbnail">1dp</dimen>
+    <dimen name="width_button_search_bar">30dp</dimen>
+    <dimen name="height_button_search_bar">30dp</dimen>
+    <dimen name="margin_right_bsb">10dp</dimen>
+    <dimen name="padding_button_search_bar">0dp</dimen>
+    <dimen name="margin_scroll_view">10dp</dimen>
+    <color name="color_selected_button_search">#FFEA00</color>
+    <color name="colorBlack">#000000</color>
 </resources>

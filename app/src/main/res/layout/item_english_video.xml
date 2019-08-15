@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="@dimen/margin_item_video"
     android:layout_marginRight="@dimen/margin_item_video"
-    android:layout_marginTop="@dimen/margin_item_video"
+    android:layout_marginBottom="@dimen/margin_item_video"
     android:background="@drawable/background_item_english_video">
     
     <ImageView

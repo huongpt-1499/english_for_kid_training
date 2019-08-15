@@ -13,5 +13,6 @@ public interface ListVideoContract {
 
     interface Presenter extends BasePresenter<View> {
         void loadVideo(String category);
+        void searchVideo(String category, String keyword);
     }
 }
