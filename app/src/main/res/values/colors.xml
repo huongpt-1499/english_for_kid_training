@@ -2,6 +2,9 @@
 <resources>
     <color name="colorPrimary">#EF6C00</color>
     <color name="colorPrimaryDark">#E65100</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#D32F2F</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorPrimaryLight">#FFCC80</color>
+    <color name="tab_background_selected">#EF6C00</color>
+    <color name="tab_background_unselected">#FFA726</color>
 </resources>

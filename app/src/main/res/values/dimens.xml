@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="nav_header_height">150dp</dimen>
+    <dimen name="width_item_video">140dp</dimen>
+    <dimen name="height_item_video">106dp</dimen>
+    <dimen name="margin_item_video">10dp</dimen>
+    <dimen name="text_size_title_item">20sp</dimen>
+    <dimen name="width_stroke_item_video">1dp</dimen>
+    <dimen name="padding_thumbnail">1dp</dimen>
 </resources>
