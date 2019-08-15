@@ -16,4 +16,5 @@ public final class Constants {
     public static final String ATTR_SRC = "src";
     public static final String ATTR_TITLE = "title";
     public static final String ATTR_HREF = "href";
+    public static final int ZERO = 0;
 }

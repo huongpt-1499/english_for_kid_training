@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_scroll_view">
+
+        <LinearLayout
+            android:id="@+id/linear_search_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_all"
+                android:layout_width="@dimen/width_button_search_bar"
+                android:layout_height="@dimen/height_button_search_bar"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/padding_button_search_bar"
+                android:tag="@string/all"
+                android:text="@string/all"
+                android:textColor="@color/selector_color_text_bsb"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scroll_view"/>
+
+</RelativeLayout>
